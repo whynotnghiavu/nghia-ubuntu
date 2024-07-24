@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=google-chrome
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=google-chrome
+Name=google-chrome
+Comment[en_US]=google-chrome
+Comment=google-chrome

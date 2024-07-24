@@ -1,0 +1,350 @@
+- defaults:
+    link:
+      relink: true
+
+- shell:
+    - command: chmod +x dotfiles/code/update-upgrade.sh && ./dotfiles/code/update-upgrade.sh
+      description: update-upgrade
+      stdout: true
+      stderr: true
+
+- clean: ["~"]
+
+- link:
+    ~/Desktop/autostart: ~/.config/autostart
+
+- link:
+    ~/.bashrc: dotfiles/code/root/.bashrc
+
+- create:
+    - dotfiles/code/root/home/.config/autostart/temp
+
+- link:
+    ~/.config/autostart/temp: dotfiles/code/root/home/.config/autostart/temp
+
+- create:
+    - ~/Downloads/Nghia
+    - ~/Downloads/Nghia/Git
+    - ~/Downloads/Nghia/Programs
+    - ~/Downloads/Nghia/Theme
+
+- link:
+    ~/Desktop/Git: ~/Downloads/Nghia/Git
+
+- shell:
+    - command: python3 --version
+      description: python3 --version
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/pip3.sh && ./dotfiles/code/pip3.sh
+      description: pip3
+      stdout: true
+      stderr: true
+
+    - command: pip3 --version
+      description: pip3 --version
+      stdout: true
+      stderr: true
+
+    - command: pip install --upgrade pip
+      description: pip install --upgrade pip
+      stdout: true
+      stderr: true
+
+    - command: pip install requests
+      description: pip install requests
+      stdout: true
+      stderr: true
+
+    - command: pip install python-dotenv
+      description: pip install python-dotenv
+      stdout: true
+      stderr: true
+
+    - command: sudo apt-get install python3-tk
+      description: sudo apt-get install python3-tk
+      stdout: true
+      stderr: true
+
+    - command: pip install pyautogui
+      description: pip install pyautogui
+      stdout: true
+      stderr: true
+
+    - command: pip install tqdm
+      description: pip install tqdm
+      stdout: true
+      stderr: true
+
+    - command: pip install latex2sympy2 sympy
+      description: pip install latex2sympy2 sympy
+      stdout: true
+      stderr: true
+
+    - command: pip3 install autopep8
+      description: pip3 install autopep8
+      stdout: true
+      stderr: true
+
+    - command: autopep8 --version
+      description: autopep8 --version
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/theme-dark.sh && ./dotfiles/code/theme-dark.sh
+      description: Thiết lập chế độ tối
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/trash.sh && ./dotfiles/code/trash.sh
+      description: Bỏ biểu tượng thùng rác
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/background.sh && ./dotfiles/code/background.sh
+      description: Thay đổi hình nền máy tính
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/Home.sh && ./dotfiles/code/Home.sh
+      description: Bỏ biểu tượng Home
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/curl.sh && ./dotfiles/code/curl.sh
+      description: curl
+      stdout: true
+      stderr: true
+
+    - command: curl --version
+      description: curl --version
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/tree.sh && ./dotfiles/code/tree.sh
+      description: tree
+      stdout: true
+      stderr: true
+
+    - command: tree --version
+      description: tree --version
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/git.sh && ./dotfiles/code/git.sh
+      description: git
+      stdout: true
+      stderr: true
+
+    - command: git --version
+      description: git --version
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/github.nghia-wifi-proxy.sh && ./dotfiles/code/github.nghia-wifi-proxy.sh
+      description: github.nghia-wifi-proxy.sh
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/github.nghia-ubuntu-link.sh && ./dotfiles/code/github.nghia-ubuntu-link.sh
+      description: github.nghia-ubuntu-link.sh
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/github.nghia-github-template.sh && ./dotfiles/code/github.nghia-github-template.sh
+      description: github.nghia-github-template.sh
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/github.nghia-push.sh && ./dotfiles/code/github.nghia-push.sh
+      description: github.nghia-push.sh
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: python3 dotfiles/code/custom-keybindings.py
+      description: python3 dotfiles/code/custom-keybindings.py
+      stdout: true
+      stderr: true
+
+    # - shell:
+    #     - command: chmod +x dotfiles/code/google-chrome.sh && ./dotfiles/code/google-chrome.sh
+    #       description: google-chrome
+    #       stdout: true
+    #       stderr: true
+
+    - command: google-chrome --version
+      description: google-chrome --version
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/autostart/google-chrome.desktop: dotfiles/code/root/home/.config/autostart/google-chrome.desktop
+
+    # - shell:
+    #     - command: chmod +x dotfiles/code/code.sh && ./dotfiles/code/code.sh
+    #       description: code
+    #       stdout: true
+    #       stderr: true
+
+- shell:
+    - command: code --version
+      description: code --version
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/autostart/code.desktop: dotfiles/code/root/home/.config/autostart/code.desktop
+
+- shell:
+    - command: chmod +x dotfiles/code/ffmpeg.sh && ./dotfiles/code/ffmpeg.sh
+      description: ffmpeg
+      stdout: true
+      stderr: true
+
+    - command: ffmpeg -version
+      description: ffmpeg -version
+      stdout: true
+      stderr: true
+
+    # - shell:
+    #     - command: chmod +x dotfiles/code/fdm.sh && ./dotfiles/code/fdm.sh
+    #       description: fdm
+    #       stdout: true
+    #       stderr: true
+
+- link:
+    ~/.config/autostart/FDM.desktop: dotfiles/code/root/home/.config/autostart/FDM.desktop
+
+- shell:
+    - command: chmod +x dotfiles/code/grub-customizer.sh && ./dotfiles/code/grub-customizer.sh
+      description: grub-customizer
+      stdout: true
+      stderr: true
+
+    - command: grub-customizer --version
+      description: grub-customizer --version
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/copyq.sh && ./dotfiles/code/copyq.sh
+      description: copyq
+      stdout: true
+      stderr: true
+
+    - command: copyq --version
+      description: copyq --version
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.config/copyq/copyq-commands.ini: dotfiles/code/root/home/.config/copyq/copyq-commands.ini
+
+- link:
+    ~/.config/autostart/copyq.desktop: dotfiles/code/root/home/.config/autostart/copyq.desktop
+
+- shell:
+    - command: chmod +x dotfiles/code/dconf-editor.sh && ./dotfiles/code/dconf-editor.sh
+      description: dconf-editor
+      stdout: true
+      stderr: true
+
+    - command: dconf-editor --version
+      description: dconf-editor --version
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/ungroup-taskbar.sh && ./dotfiles/code/ungroup-taskbar.sh
+      description: ungroup-taskbar
+      stdout: true
+      stderr: true
+
+- shell:
+    # fsearch https://www.youtube.com/watch?v=Q08qqIx3FgI
+
+    - command: chmod +x dotfiles/code/fsearch.sh && ./dotfiles/code/fsearch.sh
+      description: fsearch
+      stdout: true
+      stderr: true
+
+    - command: fsearch --version
+      description: fsearch --version
+      stdout: true
+      stderr: true
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+- shell:
+    - command: chmod +x dotfiles/code/default.mp4.sh && ./dotfiles/code/default.mp4.sh
+      description: Đặt mặc định mở tệp mp4
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.pdf.sh && ./dotfiles/code/default.pdf.sh
+      description: Đặt mặc định mở tệp pdf
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: chmod +x dotfiles/code/default.plain.sh && ./dotfiles/code/default.plain.sh
+      description: Đặt mặc định mở tệp plain
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.html.sh && ./dotfiles/code/default.html.sh
+      description: Đặt mặc định mở tệp html
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.markdown.sh && ./dotfiles/code/default.markdown.sh
+      description: Đặt mặc định mở tệp markdown
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.csv.sh && ./dotfiles/code/default.csv.sh
+      description: Đặt mặc định mở tệp csv
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.json.sh && ./dotfiles/code/default.json.sh
+      description: Đặt mặc định mở tệp json
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.python.sh && ./dotfiles/code/default.python.sh
+      description: Đặt mặc định mở tệp python
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.tex.sh && ./dotfiles/code/default.tex.sh
+      description: Đặt mặc định mở tệp tex
+      stdout: true
+      stderr: true
+
+    - command: chmod +x dotfiles/code/default.shellscript.sh && ./dotfiles/code/default.shellscript.sh
+      description: Đặt mặc định mở tệp shellscript
+      stdout: true
+      stderr: true
+
+- link:
+    ~/Templates/all.gitignore.gitignore: dotfiles/code/root/home/Templates/all.gitignore.gitignore
+    ~/Templates/main.latex.tex: dotfiles/code/root/home/Templates/main.latex.tex
+    ~/Templates/main.python.py: dotfiles/code/root/home/Templates/main.python.py
+    ~/Templates/README.md: dotfiles/code/root/home/Templates/README.md
+    ~/Templates/Text.txt: dotfiles/code/root/home/Templates/Text.txt
