@@ -10,6 +10,12 @@
 
 <!--  -->
 
+# Tham khảo submodule
+
+git submodule add https://github.com/anishathalye/dotbot contents/dotbot
+git config -f .gitmodules submodule.contents/dotbot.ignore dirty
+<!--  -->
+
 <!-- sudo apt-get install gnome-shell -->
 <!-- gnome-shell --version -->
 
