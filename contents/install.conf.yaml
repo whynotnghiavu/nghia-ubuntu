@@ -2,11 +2,11 @@
     link:
       relink: true
 
-- shell:
-    - command: chmod +x dotfiles/code/update-upgrade.sh && ./dotfiles/code/update-upgrade.sh
-      description: update-upgrade
-      stdout: true
-      stderr: true
+# - shell:
+#     - command: chmod +x dotfiles/code/update-upgrade.sh && ./dotfiles/code/update-upgrade.sh
+#       description: update-upgrade
+#       stdout: true
+#       stderr: true
 
 - clean: ["~"]
 

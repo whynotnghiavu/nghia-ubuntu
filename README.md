@@ -1,3 +1,5 @@
+chmod +x ./install  && ./install
+
 <!-- ~/xxxxxxxxxxxxxxxxxxxxxxxxxxxx: dotfiles/code/root/home/xxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <!-- dconf dump / > ~/.config/dconf/user.conf && code ~/.config/dconf/user.conf -->
